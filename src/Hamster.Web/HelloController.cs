@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Hamster.Web.Standalone
+namespace Hamster.Web
 {
     public class HelloController : Controller
     {

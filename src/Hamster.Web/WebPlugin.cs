@@ -40,7 +40,7 @@ namespace Hamster.Web
         /// </summary>
         public override void Open()
         {
-            host.Run();
+            host.Start();
         }
 
         public override void Close()
