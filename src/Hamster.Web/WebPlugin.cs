@@ -1,37 +1,51 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
+using System.Text;
+using System.Xml;
 using Hamster.Plugin;
+using Microsoft.AspNetCore;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Logging;
+using System.Net;
 
 namespace Hamster.Web
 {
     public class WebPlugin : AbstractPlugin<WebPluginSettings>
     {
-        private IWebHostBuilder builder;
         private IWebHost host;
 
+        public override void Configure(XmlElement element)
+        {
+            base.Configure(element);
+        }
+
+        /// <summary>
+        /// Setup WebHost, configure MVC and routes through Startup.
+        /// </summary>
         public override void Init()
         {
-            builder = new WebHostBuilder()
-                .ConfigureLogging(factory => {
-                        factory.AddProvider(new LogProvider(Logger));
-                    })
+            host = new WebHostBuilder()
+                .ConfigureLogging((hostingContext, logging) =>
+                {
+                    logging.AddProvider(new LogProvider(Logger));
+                })
                 .UseKestrel()
                 .UseUrls(Settings.Url)
-                .UseStartup<Startup>();
+                .UseStartup<Startup>()
+                .Build();
         }
 
-        protected override void BaseOpen()
+        /// <summary>
+        /// Start Web API.
+        /// </summary>
+        public override void Open()
         {
-            host = builder.Build();
-            host.Start();
+            host.Run();
         }
 
-        protected override void BaseClose()
+        public override void Close()
         {
-            host.Dispose();
+            host.StopAsync();
         }
     }
 }

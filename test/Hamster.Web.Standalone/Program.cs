@@ -1,7 +1,5 @@
+﻿using Hamster.Plugin.Debug;
 using System;
-
-using Hamster.Plugin.Debug;
-using Hamster.Web;
 
 namespace Hamster.Web.Standalone
 {
@@ -9,10 +7,9 @@ namespace Hamster.Web.Standalone
     {
         static void Main(string[] args)
         {
-            var plugin = new WebPlugin();
-            plugin.Name = "Web";
+            var plugin = new WebPlugin() {Name = "Hamster.Web"};
             plugin.Logger = new DebugLogger(plugin.Name);
-            plugin.Settings = new WebPluginSettings() { Url="http://localhost:8080/" };
+            plugin.Settings = new WebPluginSettings() { Url = "http://localhost:8080/" };
             plugin.Init();
             plugin.Open();
 

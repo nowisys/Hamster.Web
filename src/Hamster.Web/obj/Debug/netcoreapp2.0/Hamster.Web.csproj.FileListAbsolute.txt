@@ -1,0 +1,12 @@
+C:\Users\wunde\Desktop\Work\Selbständigkeit\Nowisys\Projekte\openHAMSTER\src\Hamster.Web\build\Hamster.Web.Standalone\bin\Debug\netcoreapp2.0\netcoreapp2.0\Hamster.Web.deps.json
+C:\Users\wunde\Desktop\Work\Selbständigkeit\Nowisys\Projekte\openHAMSTER\src\Hamster.Web\build\Hamster.Web.Standalone\bin\Debug\netcoreapp2.0\netcoreapp2.0\Hamster.Web.dll
+C:\Users\wunde\Desktop\Work\Selbständigkeit\Nowisys\Projekte\openHAMSTER\src\Hamster.Web\build\Hamster.Web.Standalone\bin\Debug\netcoreapp2.0\netcoreapp2.0\Hamster.Web.pdb
+C:\Users\wunde\Desktop\Work\Selbständigkeit\Nowisys\Projekte\openHAMSTER\src\Hamster.Web\src\Hamster.Web\obj\Debug\netcoreapp2.0\Hamster.Web.csprojResolveAssemblyReference.cache
+C:\Users\wunde\Desktop\Work\Selbständigkeit\Nowisys\Projekte\openHAMSTER\src\Hamster.Web\src\Hamster.Web\obj\Debug\netcoreapp2.0\Hamster.Web.csproj.CoreCompileInputs.cache
+C:\Users\wunde\Desktop\Work\Selbständigkeit\Nowisys\Projekte\openHAMSTER\src\Hamster.Web\src\Hamster.Web\obj\Debug\netcoreapp2.0\Hamster.Web.AssemblyInfoInputs.cache
+C:\Users\wunde\Desktop\Work\Selbständigkeit\Nowisys\Projekte\openHAMSTER\src\Hamster.Web\src\Hamster.Web\obj\Debug\netcoreapp2.0\Hamster.Web.AssemblyInfo.cs
+C:\Users\wunde\Desktop\Work\Selbständigkeit\Nowisys\Projekte\openHAMSTER\src\Hamster.Web\src\Hamster.Web\obj\Debug\netcoreapp2.0\Hamster.Web.dll
+C:\Users\wunde\Desktop\Work\Selbständigkeit\Nowisys\Projekte\openHAMSTER\src\Hamster.Web\src\Hamster.Web\obj\Debug\netcoreapp2.0\Hamster.Web.pdb
+C:\Users\wunde\Desktop\Work\Selbständigkeit\Nowisys\Projekte\openHAMSTER\src\Hamster.Web\build\Hamster.Web\bin\Debug\netcoreapp2.0\Hamster.Web.deps.json
+C:\Users\wunde\Desktop\Work\Selbständigkeit\Nowisys\Projekte\openHAMSTER\src\Hamster.Web\build\Hamster.Web\bin\Debug\netcoreapp2.0\Hamster.Web.dll
+C:\Users\wunde\Desktop\Work\Selbständigkeit\Nowisys\Projekte\openHAMSTER\src\Hamster.Web\build\Hamster.Web\bin\Debug\netcoreapp2.0\Hamster.Web.pdb

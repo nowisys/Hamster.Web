@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Hamster.Web.Standalone": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

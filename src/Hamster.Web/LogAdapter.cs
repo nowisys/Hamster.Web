@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Text;
 using System.Threading;
 using Microsoft.Extensions.Logging;
@@ -62,12 +62,14 @@ namespace Hamster.Web
         public void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception exception, Func<TState, Exception, string> formatter)
         {
             Hamster.Plugin.LogLevel level = TranslateLevel(logLevel);
-            if (!logger.IsLevelEnabled(level)) {
+            if (!logger.IsLevelEnabled(level))
+            {
                 return;
             }
 
             var builder = new StringBuilder();
-            for (var scope = Scope.Current; scope != null; scope = scope.Parent) {
+            for (var scope = Scope.Current; scope != null; scope = scope.Parent)
+            {
                 builder.Insert(0, $"=> {scope} ");
             }
             builder.Append(formatter(state, exception));

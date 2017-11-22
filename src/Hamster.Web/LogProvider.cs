@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using Microsoft.Extensions.Logging;
 
 namespace Hamster.Web
@@ -32,7 +32,8 @@ namespace Hamster.Web
             if (disposed)
                 return;
 
-            if (disposing) {
+            if (disposing)
+            {
                 // Free any other managed objects here.
                 //
             }
