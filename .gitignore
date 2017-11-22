@@ -1,8 +1,9 @@
 # Build results
 build/*
 
-# VisualStudioCode
+# VisualStudio
 .vscode/*
+.vs/
 
 # User-specific files
 *.suo
