@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <OutputPath>../../build/Hamster.Web.Test/bin\Debug\</OutputPath>
+    <OutputPath>../../build/Hamster.Web.Test/</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>

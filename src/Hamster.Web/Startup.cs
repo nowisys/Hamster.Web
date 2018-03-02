@@ -1,7 +1,14 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
+using System.Reflection;
 
 namespace Hamster.Web
 {
@@ -14,25 +21,26 @@ namespace Hamster.Web
 
         public IConfiguration Configuration { get; }
 
+        // This method gets called by the runtime. Use this method to add further services for the Web Plugin.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc();
+            // Discover Controller in Assemblies and add them to ASP.NET IoC.
+            var assemblies = AppDomain.CurrentDomain.GetAssemblies().Where<Assembly>(a => a.GetName().FullName.Contains("Hamster")).ToArray();
+            foreach (var assembly in assemblies)
+            {
+                services.AddMvc().AddApplicationPart(assembly).AddControllersAsServices();
+            }
         }
 
+        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            // Declared by environment variable ASPNETCORE_ENVIRONMENT = Develop. Default is Production.
-            if(env.IsDevelopment())
+            if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseMvc(routes =>
-            {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Hello}/{action=Index}");
-            });
+            app.UseMvc();
         }
     }
 }

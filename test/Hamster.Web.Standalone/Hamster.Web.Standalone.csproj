@@ -6,8 +6,12 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <OutputPath>../../build/Hamster.Web.Standalone/bin\Debug\</OutputPath>
+    <OutputPath>../../build/Hamster.Web.Standalone/</OutputPath>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\Hamster.Web\Hamster.Web.csproj" />
