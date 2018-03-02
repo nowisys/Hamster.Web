@@ -1,6 +1,6 @@
 # Build results
 build/*
-obj/*
+obj/
 
 # VisualStudio
 .vscode/*
