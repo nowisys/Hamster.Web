@@ -27,7 +27,10 @@ namespace Hamster.Web
 
         public void Bind(string name, object instance)
         {
-            bindedPlugins.Add((IPlugin)instance);
+            if(instance is IPlugin)
+            {
+                bindedPlugins.Add((IPlugin)instance);
+            }
         }
 
         public void BindingComplete()
