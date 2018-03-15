@@ -1,9 +1,9 @@
 # Build results
-build/*
+build/
 obj/
 
 # VisualStudio
-.vscode/*
+.vscode/
 .vs/
 
 # User-specific files
