@@ -5,8 +5,6 @@ VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hamster.Web", "src\Hamster.Web\Hamster.Web.csproj", "{D8A993BE-5D57-4F66-9038-0F15673C3B6C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hamster.Web.Standalone", "test\Hamster.Web.Standalone\Hamster.Web.Standalone.csproj", "{92DF53DD-EEC3-467E-9948-A5D76D738850}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hamster.Web.Test", "test\Hamster.Web.Test\Hamster.Web.Test.csproj", "{1052A373-50F4-4143-AAAB-FE687C18EB8B}"
 EndProject
 Global

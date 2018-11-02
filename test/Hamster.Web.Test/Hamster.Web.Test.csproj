@@ -18,4 +18,10 @@
     <ProjectReference Include="..\..\src\Hamster.Web\Hamster.Web.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="Hamster.Plugin">
+      <HintPath>..\..\..\Hamster.Plugin\build\Hamster.Plugin\bin\Debug\netstandard2.0\Hamster.Plugin.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
