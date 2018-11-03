@@ -1,11 +1,11 @@
-﻿using Hamster.Plugin;
+﻿using System;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Builder;
-using System;
-using System.Collections.Generic;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.DependencyInjection;
 using WebApiContrib.Core;
+using Hamster.Plugin;
 
 namespace Hamster.Web
 {
