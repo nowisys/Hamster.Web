@@ -24,7 +24,7 @@ namespace Hamster.Web.Test
             }
         }
 
-        //[Fact]
+        [Fact]
         public void TwoApps()
         {
             using (var plugin = new WebPlugin() { Name = "Hamster.Web" }) {
@@ -46,7 +46,7 @@ namespace Hamster.Web.Test
             }
         }
 
-        //[Fact]
+        [Fact]
         public void Mvc()
         {
             using (var plugin = new WebPlugin() { Name = "Hamster.Web" }) {
