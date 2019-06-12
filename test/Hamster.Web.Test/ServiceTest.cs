@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Net.Http;
 using Xunit;
 using Microsoft.AspNetCore.Builder;
@@ -68,16 +68,16 @@ namespace Hamster.Web.Test
 
             using (var plugin = new WebPlugin() { Name = "Hamster.Web" }) {
                 plugin.Logger = new DebugLogger(plugin.Name);
-                plugin.Settings = new WebPluginSettings() { Url = "http://localhost:8080/" };
+                plugin.Settings = new WebPluginSettings() { Url = "http://localhost:8081/" };
                 plugin.Init();
                 plugin.AddApp("api", new WebService<Service>(service, typeof(DefaultServiceController)));
                 plugin.Open();
 
                 service.Data = "test1";
-                Assert.Equal("test1", WebRequest("http://localhost:8080/api/DefaultService/Get"));
+                Assert.Equal("test1", WebRequest("http://localhost:8081/api/DefaultService/Get"));
 
                 service.Data = "test2";
-                Assert.Equal("test2", WebRequest("http://localhost:8080/api/DefaultService/Get"));
+                Assert.Equal("test2", WebRequest("http://localhost:8081/api/DefaultService/Get"));
             }
         }
 
@@ -88,16 +88,16 @@ namespace Hamster.Web.Test
 
             using (var plugin = new WebPlugin() { Name = "Hamster.Web" }) {
                 plugin.Logger = new DebugLogger(plugin.Name);
-                plugin.Settings = new WebPluginSettings() { Url = "http://localhost:8080/" };
+                plugin.Settings = new WebPluginSettings() { Url = "http://localhost:8081/" };
                 plugin.Init();
                 plugin.AddApp("api", new WebService<Service>(service, typeof(AttributeServiceController)));
                 plugin.Open();
 
                 service.Data = "test1";
-                Assert.Equal("test1", WebRequest("http://localhost:8080/api/data"));
+                Assert.Equal("test1", WebRequest("http://localhost:8081/api/data"));
 
                 service.Data = "test2";
-                Assert.Equal("test2", WebRequest("http://localhost:8080/api/data"));
+                Assert.Equal("test2", WebRequest("http://localhost:8081/api/data"));
             }
         }
     }

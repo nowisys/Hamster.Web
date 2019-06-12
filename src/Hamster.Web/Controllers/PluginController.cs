@@ -1,12 +1,10 @@
-using System;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Http;
 using Hamster.Plugin;
 
 namespace Hamster.Web.Controllers
 {
     [Route("plugin")]
-    public class PluginController
+    public class PluginController : Controller
     {
         private IPlugin plugin;
 
